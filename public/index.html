@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Shopping List</title>
+        <link rel="stylesheet" type="text/css" href="/css/styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+
+    <body onload="getAllElements()">
+        <div id="box">
+            <form method="post" id="createForm">
+                <div class="block">
+                    <label for="item">Shopping Item</label> <br>
+                    <input type="text" name="item" id="item" class="textInput">
+                </div>
+        
+                <div class="block">
+                    <label for="quantity">Quantity</label> <br>
+                    <input type="text" name="quantity" id="quantity" class="textInput">
+                </div>
+                <button type="submit" value="Add item" class="arrowBtn" id="addItem">Add Item</button>
+                <br>
+                <h5 id="createMessage"></h5>
+            </form>
+        
+            <br>
+
+            <form id="updateForm">
+                <div class="block">
+                    <label for="updatedItem">Update Item</label> <br>
+                    <input type="text" name="updatedItem" id="updatedItem" class="textInput">
+                </div>
+
+                <div class="block">
+                    <label for="updatedQuantity">Update Quantity</label> <br>
+                    <input type="text" name="updatedQuantity" id="updatedQuantity" class="textInput">
+                </div>
+                <button type="submit" value="Update item" class="arrowBtn" id="updateItem">Update Item</button>
+                <br>
+                <h5 id="updateMessage"></h5>
+            </form>
+
+            <br>
+
+            <div id="shoppingListTable"></div>
+
+            <br>
+            
+            <button type="submit" value="Clear all items" class="normalButton" id="clearAll">Clear all items</button>
+
+        </div>
+
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+        <script src="/js/index.js"></script>
+    </body>
+</html>
